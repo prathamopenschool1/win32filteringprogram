@@ -40,13 +40,13 @@ def call_kolbri():
         # pprint(lstscore)
 
         # pi id data to be collected
-        os.system('cat /proc/cpuinfo > serial_data.txt')
-        serial_file = open('serial_data.txt', "r+")
-        for line in serial_file:
-            if line.startswith('Serial'):
-                serial_line = line
+        # os.system('cat /proc/cpuinfo > serial_data.txt')
+        # serial_file = open('serial_data.txt', "r+")
+        # for line in serial_file:
+        #     if line.startswith('Serial'):
+        #         serial_line = line
 
-        lstscore['serial_id'] = serial_line
+        # lstscore['serial_id'] = serial_line
 
         # checks the value of count
         if lstscore['count'] == 0:
@@ -81,7 +81,7 @@ def call_kolbri():
                             # messagebox.showinfo("pratham", e)
 
                     try:
-                        with open(os.path.join("/opt/PIHDD/KOLIBRI_DATA/content/storage/pdata/Backup",
+                        with open(os.path.join(r"D:\Kolibri_data_bkp\Backup",
                                                randstr + str(datetime.datetime.now()) + '.json'),
                                   "w") as outfile:
                             json.dump(lstscore, outfile, indent=4, sort_keys=True)
