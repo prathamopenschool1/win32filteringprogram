@@ -82,7 +82,7 @@ def call_kolbri():
 
                     try:
                         with open(os.path.join(r"D:\Kolibri_data_bkp\Backup",
-                                               randstr + str(datetime.datetime.now()) + '.json'),
+                                               randstr + '.json'),
                                   "w") as outfile:
                             json.dump(lstscore, outfile, indent=4, sort_keys=True)
                             # /opt/PIHDD/KOLIBRI_DATA/content/storage/pdata/Backup
