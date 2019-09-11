@@ -81,7 +81,7 @@ def call_kolbri():
                             # messagebox.showinfo("pratham", e)
 
                     try:
-                        with open(os.path.join(r"D:\Kolibri_data_bkp\Backup",
+                        with open(os.path.join(r"C:\prathamdata\Backup",
                                                randstr + '.json'),
                                   "w") as outfile:
                             json.dump(lstscore, outfile, indent=4, sort_keys=True)

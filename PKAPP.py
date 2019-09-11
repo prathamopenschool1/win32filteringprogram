@@ -96,18 +96,18 @@ class StartPage(tk.Frame):
             else:
                 messagebox.showinfo("pratham", "some problem occurred!")
 
-        pull = ttk.Button(self, text="PULL DATA", command=look_internet, width=12)
+        pull = ttk.Button(self, text="PULL DATA", command=look_internet, width=15)
         pull.grid(sticky="W", row=5, column=0, padx=2, pady=120)
-        push = ttk.Button(self, text="PUSH DATA", command=push_data, width=13)
+        push = ttk.Button(self, text="PUSH DATA", command=push_data, width=15)
         push.grid(sticky="W", row=5, column=2, padx=2, pady=120)
-        back_up = ttk.Button(self, text="BACKUP DATA", command=backup_data, width=12)
+        back_up = ttk.Button(self, text="BACKUP DATA", command=backup_data, width=15)
         back_up.grid(sticky="W", row=5, column=4, padx=2, pady=120)
-        call_apk = ttk.Button(self, text="UPDATE APK", command=update_apks, width=12)
-        call_apk.grid(sticky="W", row=7, column=0, padx=2, pady=30)
-        desk = ttk.Button(self, text="DESKTOP DATA", command=desktop_data, width=13)
-        desk.grid(sticky="W", row=7, column=2, padx=2, pady=30)
-        clear = ttk.Button(self, text="DELETE DATA", command=delete_data, width=12)
-        clear.grid(sticky='W', row=7, column=4, padx=2, pady=30)
+        call_apk = ttk.Button(self, text="UPDATE APK", command=update_apks, width=15)
+        call_apk.grid(sticky="W", row=6, column=0, padx=2, pady=30)
+        desk = ttk.Button(self, text="DESKTOP DATA", command=desktop_data, width=15)
+        desk.grid(sticky="W", row=6, column=2, padx=2, pady=30)
+        clear = ttk.Button(self, text="DELETE DATA", command=delete_data, width=15)
+        clear.grid(sticky='W', row=6, column=4, padx=2, pady=30)
 
 
 class ProgramState(tk.Frame):
@@ -940,5 +940,5 @@ positionRight = int(app.winfo_screenwidth() / 2 - windowWidth / 2)
 positionDown = int(app.winfo_screenheight() / 6 - windowHeight / 2)
 
 app.geometry("+{}+{}".format(positionRight, positionDown))
-app.geometry("360x343")
+app.geometry("315x343")
 app.mainloop()
