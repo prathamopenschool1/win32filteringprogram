@@ -85,12 +85,8 @@ def get_new_data():
             res_device = json.loads(response_device.content.decode("utf-8"))
 
             # pi id data to be collected
-            # os.system('cat /proc/cpuinfo > serial_data.txt')
-            # serial_file = open('serial_data.txt', "r+")
-            # for line in serial_file:
-            #     if line.startswith('Serial'):
-            #         serial_line = line
-
+            import re, uuid
+            serial_line = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
             # print(serial_line)
 
             # desktop score data to be posted
@@ -99,7 +95,7 @@ def get_new_data():
                 "facility_info": facility_result,
                 "device_info": res_device,
                 "pi_session_info": new_data,
-                # "serial_id": serial_line
+                "serial_id": serial_line
             }
 
             try:

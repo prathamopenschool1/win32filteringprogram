@@ -40,13 +40,11 @@ def call_kolbri():
         # pprint(lstscore)
 
         # pi id data to be collected
-        # os.system('cat /proc/cpuinfo > serial_data.txt')
-        # serial_file = open('serial_data.txt', "r+")
-        # for line in serial_file:
-        #     if line.startswith('Serial'):
-        #         serial_line = line
+        import re, uuid
+        serial_line = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
 
-        # lstscore['serial_id'] = serial_line
+        lstscore['serial_id'] = serial_line
+        print(serial_line)
 
         # checks the value of count
         if lstscore['count'] == 0:

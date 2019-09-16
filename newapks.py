@@ -11,7 +11,7 @@ def update_tab_apk():
 
     apk_tab = requests.get(tab_url, stream=True)
 
-    with open(r"C:\inetpub\wwwroot\TabPraDigi.apk", 'wb') as f:
+    with open(r"C:\prathamdata\Apks\TabPraDigi.apk", 'wb') as f:
         f.write(apk_tab.content)
 
 
@@ -21,7 +21,7 @@ def update_smart_apk():
 
     apk_smart = requests.get(smart_url, stream=True)
 
-    with open(r'C:\inetpub\wwwroot\SmartPhonePraDigi.apk', 'wb') as smart:
+    with open(r'C:\prathamdata\Apks\SmartPhonePraDigi.apk', 'wb') as smart:
         smart.write(apk_smart.content)
 
     if apk_smart.status_code == 200:
